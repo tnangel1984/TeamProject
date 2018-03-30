@@ -4,24 +4,24 @@ const mongoose = require('mongoose');
 
 
 //Controllers
-   const newController = require('./controllers/new.js')
+   const moviesController = require('./controllers/movies.js')
 
 //Middleware
    app.use(express.json());
    app.use(express.static('public'));
-   app.use('/new',newController);
+   app.use('/movies',moviesController);
+   app.use(express.urlencoded({extended:false}))
 
-   
-// //test Route
-// app.get('/', (req, res)=>{
-//      res.send("Hello world");
-// })
+//test Route
+app.get('/', (req, res)=>{
+     res.send("Hello world");
+})
 
 
 
 
 //Connections
-const mongoURI='mongodb://localhost:27017/NewDB';
+const mongoURI='mongodb://localhost:27017/MoviesDB';
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', ()=>{
     console.log("Mongo is connected");
