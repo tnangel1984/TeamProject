@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 const movieSchema = new Schema({
       madeBy:String,
       title:String,
-      likes:Number
+      likes: {type: Number, default:0}
     },
     {timestamps:true}
 );

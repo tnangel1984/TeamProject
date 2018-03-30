@@ -7,6 +7,14 @@ nav{
   background:lightblue;
   color:white
 }
+form{
+  padding: 20px;
+  background: lightgray
+}
 .card {
   text-align: center;
+  margin-top: 20px;
+}
+.item{
+  padding:10px
 }
