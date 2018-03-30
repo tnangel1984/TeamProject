@@ -18,7 +18,7 @@ router.get('/', (req, res)=>{
 
 router.post('/', (req, res)=>{
   Movies.create(req.body, (error, newMovie)=>{
-      console.log(req.qbody);
+      console.log(req.body);
        res.json(newMovie);
   })
 })
