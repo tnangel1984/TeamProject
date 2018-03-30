@@ -1,3 +1,3 @@
 # TeamProject
 
-Hello, it's Karolin
+Team member: Benjamin Peters
