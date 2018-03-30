@@ -1,0 +1,24 @@
+{
+  "name": "teamproject",
+  "version": "1.0.0",
+  "description": "Hello, it's Karolin",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnangel1984/TeamProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tnangel1984/TeamProject/issues"
+  },
+  "homepage": "https://github.com/tnangel1984/TeamProject#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.0.12"
+  }
+}
