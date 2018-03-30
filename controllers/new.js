@@ -1,38 +1,41 @@
 const express = require('express');
 const mongoose = require('mongoose');
-
+const router = express.Router();
 
 
 //Routes
 
 //get
 
-app.get('/', (req, res)=>{
+router.get('/', (req, res)=>{
   res.send("test");
 })
 
 
 //post
 
-app.post('/', (req, res)=>{
+router.post('/', (req, res)=>{
 
 })
 
 //put
 
-app.put('/:id', (req, res)=>{
+router.put('/:id', (req, res)=>{
 
 })
 
 //delete
 
-app.delete('/:id', (req, res)=>{
+router.delete('/:id', (req, res)=>{
 
 })
 
 
 //index
 
-app.get('/:id', (req, res)=>{
+router.get('/:id', (req, res)=>{
 
 })
+
+
+module.exports = router;
