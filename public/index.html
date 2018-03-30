@@ -33,12 +33,12 @@
                 {{movie.title}}
                 <form ng-if="ctrl.id === movie._id" ng-submit="ctrl.editMovie(movie)">
                   <label>Edit Title:</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ng-model="ctrl.newTitle">
                   <label>Edit Made By:</label>
-                  <input type="text" class="form-control">
-                    <button class="btn btn-success" type="button" >Edit</button>
+                  <input type="text" class="form-control" ng-model="ctrl.newMadeBy">
+                  <button type="submit" class="btn btn-success" type="button">Submit Changes</button>
                 </form>
-                <a class="btn btn-success"  ng-click="ctrl.id = movie._id">Edit</a>
+                <img class='editImg' src="images/edit.svg" ng-click="ctrl.id = movie._id">
                 <button class="btn btn-danger" type="button" ng-click="ctrl.deleteMovie(movie)">Delete</button>
               </div>
 
@@ -48,10 +48,17 @@
             <div class="card">
               <h3>Disney</h3>
               <hr>
-              <p ng-repeat="movie in ctrl.movies" ng-if="movie.madeBy === 'disney' ">{{movie.title}}
-                <button class="btn btn-success" type="button" ng-click="ctrl.editMovie(movie)">Edit</button>
+              <div ng-repeat="movie in ctrl.movies" ng-if="movie.madeBy === 'disney' ">
+                {{movie.title}}
+                <form ng-if="ctrl.id === movie._id" ng-submit="ctrl.editMovie(movie)">
+                  <label>Edit Title:</label>
+                  <input type="text" class="form-control" ng-model="ctrl.newTitle">
+                  <label>Edit Made By:</label>
+                  <input type="text" class="form-control" ng-model="ctrl.newMadeBy">
+                  <button type="submit" class="btn btn-success" type="button">Submit Changes</button>
+                </form>
+                <img class='editImg' src="images/edit.svg" ng-click="ctrl.id = movie._id">
                 <button class="btn btn-danger" type="button" ng-click="ctrl.deleteMovie(movie)">Delete</button>
-              </p>
             </div>
           </div>
         </div>

@@ -35,8 +35,11 @@ app.controller('MainController', ['$http' , function($http) {
       method: 'PUT',
       url: '/movies/' + movie._id,
       data: {
-
+        title: this.newTitle,
+        madeBy: this.newMadeBy
       }
+    }).then(response => {
+      this.getMovies()
     })
   }
 
