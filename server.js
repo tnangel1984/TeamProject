@@ -5,16 +5,11 @@ const mongoose = require('mongoose');
 //Middleware
 app.use(express.json());
 app.use(express.static('public'));
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false}));
 
 //Controllers
 const moviesController = require('./controllers/movies.js')
-app.use('/movies',moviesController);
-
-//test Route
-app.get('/', (req, res)=>{
-     res.send("Hello world");
-})
+app.use('/movies', moviesController);
 
 //Connections
 const mongoURI='mongodb://localhost:27017/MoviesDB';
