@@ -1,0 +1,37 @@
+html, body{
+  width:100%;
+}
+nav{
+  width: 100%;
+  padding:20px;
+  background:lightblue;
+  color:white
+}
+form{
+  padding: 20px;
+  background: lightgray
+}
+.card {
+  text-align: center;
+  margin-top: 20px;
+}
+.item{
+  padding:10px
+}
+.editImg{
+  padding:5px;
+  width:25px;
+}
+.pix{
+/* height: 150px; */
+width: 100%;
+
+}
+
+.dis{
+    /* height: 150px; */
+    width: 100%;
+
+}
+
+h2{ text-align: center;}
