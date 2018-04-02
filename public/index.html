@@ -31,14 +31,14 @@
               <hr>
               <div class="item" ng-repeat="movie in ctrl.movies" ng-if="movie.madeBy === 'pixar' ">
                 {{movie.title}}
-                <form ng-if="ctrl.id === movie._id" ng-submit="ctrl.editMovie(movie)">
+                <form ng-if="ctrl.index === $index" ng-submit="ctrl.editMovie(movie)">
                   <label>Edit Title:</label>
-                  <input type="text" class="form-control" ng-model="ctrl.newTitle">
+                  <input type="text" class="form-control" placeholder="{{movie.title}}" ng-model="ctrl.newTitle">
                   <label>Edit Made By:</label>
-                  <input type="text" class="form-control" ng-model="ctrl.newMadeBy">
-                  <button type="submit" class="btn btn-success" type="button">Submit Changes</button>
+                  <input type="text" class="form-control"  placeholder="{{movie.madeBy}}" ng-model="ctrl.newMadeBy">
+                  <button type="submit" class="btn btn-success" type="button">Update</button>
                 </form>
-                <img class='editImg' src="images/edit.svg" ng-click="ctrl.id = movie._id">
+                <img class='editImg' src="images/edit.svg" ng-click="(ctrl.index === $index) ? ctrl.index = null: ctrl.index = $index">
                 <button class="btn btn-danger" type="button" ng-click="ctrl.deleteMovie(movie)">Delete</button>
               </div>
 
@@ -48,16 +48,16 @@
             <div class="card">
               <h3>Disney</h3>
               <hr>
-              <div ng-repeat="movie in ctrl.movies" ng-if="movie.madeBy === 'disney' ">
+              <div class="item" ng-repeat="movie in ctrl.movies" ng-if="movie.madeBy === 'disney' ">
                 {{movie.title}}
-                <form ng-if="ctrl.id === movie._id" ng-submit="ctrl.editMovie(movie)">
+                <form ng-if="ctrl.index === $index" ng-submit="ctrl.editMovie(movie)">
                   <label>Edit Title:</label>
-                  <input type="text" class="form-control" ng-model="ctrl.newTitle">
+                  <input type="text" class="form-control" placeholder="{{movie.title}}" ng-model="ctrl.newTitle">
                   <label>Edit Made By:</label>
-                  <input type="text" class="form-control" ng-model="ctrl.newMadeBy">
-                  <button type="submit" class="btn btn-success" type="button">Submit Changes</button>
+                  <input type="text" class="form-control" placeholder="{{movie.madeBy}}" ng-model="ctrl.newMadeBy">
+                  <button type="submit" class="btn btn-success" type="button">Update</button>
                 </form>
-                <img class='editImg' src="images/edit.svg" ng-click="ctrl.id = movie._id">
+                <img class='editImg' src="images/edit.svg" ng-click="(ctrl.index === $index) ? ctrl.index = null: ctrl.index = $index">
                 <button class="btn btn-danger" type="button" ng-click="ctrl.deleteMovie(movie)">Delete</button>
             </div>
           </div>

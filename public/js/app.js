@@ -3,6 +3,7 @@ const app = angular.module('MoviesApp', []);
 app.controller('MainController', ['$http' , function($http) {
 
   this.formData = {};
+  this.index;
 
   this.getMovies = () => {
     $http({
@@ -39,7 +40,8 @@ app.controller('MainController', ['$http' , function($http) {
         madeBy: this.newMadeBy
       }
     }).then(response => {
-      this.getMovies()
+      this.getMovies();
+      this.index = null;
     })
   }
 
